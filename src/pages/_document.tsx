@@ -1,3 +1,4 @@
+import { getCssText } from '@/styles'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -11,6 +12,9 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+
+        {/* Aplicando css da pagina pelo lado do servidor next */}
+        <style dangerouslySetInnerHTML={{ __html: getCssText() }} />
       </body>
     </Html>
   )
