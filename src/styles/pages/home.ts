@@ -1,4 +1,5 @@
 import { styled } from "..";
+import Link from 'next/link'
 
 export const HomeContainer = styled('main', {
     display: 'flex',
@@ -9,13 +10,14 @@ export const HomeContainer = styled('main', {
     minHeight: 606
 })
 
-export const Product = styled('a', {
+export const Product = styled(Link, {
     background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
     borderRadius: 8,
     // padding: '0.25rem',
     cursor: 'pointer',
     position: 'relative',
     overflow: 'hidden',
+    color: '$gray100',
 
     display: 'flex',
     alignItems: 'center',

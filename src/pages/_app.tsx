@@ -6,12 +6,15 @@ import logoSvg from '../assets/logo.svg'
 globalStyles();
 
 import Image from 'next/image'
+import Link from 'next/link';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Container>
       <Header>
-        <Image src={logoSvg} alt="" />
+        <Link href="/">
+          <Image src={logoSvg} alt="" />
+        </Link>
       </Header>
       <Component {...pageProps} />
     </Container>
